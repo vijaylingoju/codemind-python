@@ -1,0 +1,1 @@
+print(3.14*pow(int(input()),2))
