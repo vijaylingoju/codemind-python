@@ -1,9 +1,9 @@
+a='abcdefghijklmnopqrstuvwxyz'
 s=list(input().lower())
-p='abcdefghijklmnopqrstuvwxyz'
-ns=0
 while ' ' in s:
     s.remove(' ')
-for i in p:
-    if s.count(i)==1:
-        ns+=1
-print(ns)        
+x=0
+for i in a:
+    if (i in s and s.count(i)==1):
+        x+=1
+print(x)        
