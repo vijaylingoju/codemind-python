@@ -1,17 +1,18 @@
-v='aeiouAEIOU'
-s=input().split()
-for i in s:
-    x,s=[],''
-    for j in i:
-        if j not in v:
-            x.append(j)
-    x=sorted(x)
-    p=0
-    for k in range(len(i)):
-        if i[k] not in v:
-            s+=x[p]
-            p+=1
+l=list(map(str,input().split()))
+a='aeiou'
+for i in range(len(l)):
+    t=l[i]
+    s=[]
+    for j in range(len(t)):
+        if t[j] not in a:
+            s.append(t[j])
+    s=sorted(s)
+    n=0
+    v=''
+    for k in range(len(t)):
+        if t[k] not in a:
+            v+=s[n]
+            n+=1
         else:
-            s+=i[k]
-    print(s,end=" ")            
-                    
+            v+=t[k]
+    print(v,end=' ')
