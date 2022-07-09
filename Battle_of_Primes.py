@@ -1,15 +1,14 @@
-from math import sqrt
-def prime(n):
-    for i in range(2,int(sqrt(n))+1):
+def fun(n):
+    for i in range(2,int(n**0.5)+1):
         if n%i==0:
             return 0
-    return 1    
+    return 1        
 
 a=int(input())
 b=int(input())
-i=1
+p=1
 while True:
-    if prime(a+b+i)==1:
-        print(i)
+    if fun(a+b+p)==1:
+        print(p)
         exit()
-    i+=1    
+    p+=1    
