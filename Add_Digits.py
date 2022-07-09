@@ -1,11 +1,13 @@
-def fun(n):
-    s=0
-    while n:
-        s+=n%10
-        n=n//10
-    return s    
-
 n=int(input())
-while n>10:
-    n=fun(n)
-print(n)    
+while True:
+    n=list(str(n))
+    p=0
+    for i in n:
+        p+=int(i)
+    if p<10:
+        print(p)
+        exit()
+    n.clear()
+    n=str(p)
+    
+    
