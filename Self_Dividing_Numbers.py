@@ -1,20 +1,14 @@
-def fun(n):
-    t,c,p=n,0,0
-    while t:
-        d=t%10
-        if d==0:
-            return 0
-        if n%d==0:
-            c+=1
-        p+=1    
-        t=t//10
-    if p==c:
-        return 1
-    else:
-        return 0
-
 a=int(input())
 b=int(input())
+x=[]
 for i in range(a,b+1):
-    if fun(i)==1:
-        print(i,end=" ")
+    i=str(i)
+    c=0
+    for j in i:
+        if j=='0':
+            break
+        if int(i)%int(j)==0:
+            c+=1
+    if c==len(i):
+        x.append(int(i))
+print(*x)        
