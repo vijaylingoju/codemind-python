@@ -5,7 +5,6 @@ for i in ls2:
     if i not in ls1:
         print("No")
         exit()
-    p=ls1.index(i)    
-    ls1.remove(ls1[p])
+    ls1.remove(i)
 print("Yes")    
         
