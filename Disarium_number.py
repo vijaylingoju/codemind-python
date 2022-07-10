@@ -1,14 +1,8 @@
-n=int(input())
-t=n
-x=[]
-while n:
-    x.append(n%10)
-    n=n//10
-s,k=0,1    
-for i in range(len(x)-1,-1,-1):
-    s+=x[i]**k
-    k+=1
-if s==t:
-    print('True')
+n=input()
+s=0
+for i in range(len(n)):
+    s+=int(n[i])**(i+1)
+if s==int(n):
+    print("True")
 else:
-    print('False')
+    print("False")
