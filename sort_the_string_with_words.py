@@ -1,3 +1,1 @@
-s=input()
-s=s.split()
-print(*sorted(s))
+print(*sorted((input().split())))
